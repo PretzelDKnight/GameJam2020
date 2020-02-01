@@ -49,10 +49,16 @@ public class Rubiks : MonoBehaviour
         {
             turnable = true;
             if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
                 CreatePiece();
+            }
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                Cursor.lockState = CursorLockMode.None;
                 DestroyPiece();
+            }
 
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -144,7 +150,6 @@ public class Rubiks : MonoBehaviour
         }
         else
         {
-            DestroyPiece();
             return false;
         }
     }

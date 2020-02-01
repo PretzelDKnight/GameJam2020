@@ -27,8 +27,6 @@ public class Model : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
         mousePos = new Vector2[2];
         mousePos[0] = Vector2.zero;
@@ -41,7 +39,17 @@ public class Model : MonoBehaviour
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 
-        direction = new Vector3(mouseY, -mouseX, 0).normalized;
+        direction = new Vector3(-mouseY, -mouseX, 0).normalized;
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
         if (Input.GetKey(KeyCode.Mouse1) && !rubiks.Working())
         {
