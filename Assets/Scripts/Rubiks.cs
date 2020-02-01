@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rubiks : MonoBehaviour
 {
+    bool working;
     public Vector3 camDir = Vector3.forward;
     float mouseX;
     float mouseY;
@@ -33,6 +34,7 @@ public class Rubiks : MonoBehaviour
     {
         directionList = new Vector3[6];
         CheckDir();
+        working = false;
     }
 
     // Update is called once per frame
@@ -47,10 +49,16 @@ public class Rubiks : MonoBehaviour
         {
             turnable = true;
             if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
                 CreatePiece();
+            }
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                Cursor.lockState = CursorLockMode.None;
                 DestroyPiece();
+            }
 
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -106,10 +114,12 @@ public class Rubiks : MonoBehaviour
                 item.used = false;
             }
         }
+        working = false;
     }
 
     void CreatePiece()
     {
+        working = true;
         Debug.Log("Creating Piece");
         foreach (var item in pieces)
         {
@@ -140,7 +150,6 @@ public class Rubiks : MonoBehaviour
         }
         else
         {
-            DestroyPiece();
             return false;
         }
     }
@@ -190,5 +199,10 @@ public class Rubiks : MonoBehaviour
         {
             Rotate(- mod);
         }
+    }
+
+    public bool Working()
+    {
+        return working;
     }
 }
