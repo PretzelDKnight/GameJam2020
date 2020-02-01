@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    public int ID;
     const float rate = 1.5f;
     const float errorMargin = 0.02f;
 
     public bool used = false;
     public bool turning = false;
     public static int neighbourCount = 3;
+    public LayerMask mask;
 
-    float[] distances = new float[neighbourCount];
 
     float time;
     float dir;
@@ -22,10 +23,6 @@ public class Piece : MonoBehaviour
     void Start()
     {
         AddNeighbours();
-        for (int i = 0; i < neighbourCount; i++)
-        {
-            distances[i] = Vector3.Distance(transform.position, nPieces[i].transform.position);
-        }
     }
 
     // Update is called once per frame
@@ -42,27 +39,7 @@ public class Piece : MonoBehaviour
         }
     }
 
-    public bool CheckSolve()
-    {
-        int n = 0;
-        float temp;
-
-        for (int i = 0; i < neighbourCount; i++)
-        {
-            temp = Vector3.Distance(transform.position, nPieces[i].transform.position);
-
-            if (Mathf.Abs(temp - distances[i]) > errorMargin)
-            {
-                n++;
-            }
-        }
-
-        if (n == 0)
-            return true;
-        else
-            return false;
-    }
-
+   
     void AddNeighbours()
     {
         Vector3[] dir = new Vector3[6];
@@ -77,12 +54,51 @@ public class Piece : MonoBehaviour
 
         for (int i = 0; i < dir.Length; i++)
         {
-            if (Physics.Raycast(transform.position, dir[i], out hit, 0.6f))
+            if (Physics.Raycast(transform.position, dir[i], out hit, 0.6f, mask))
             {
-                nPieces.Add(hit.transform.GetComponent<Piece>());
+                Piece p = hit.transform.GetComponent<Piece>();
+                nPieces.Add(p);
+
+                Debug.Log(this.ID + " " + p.ID); 
             }
         }
 
         Debug.Log("Temp list : " + nPieces.Count);
+    }
+
+    public bool CheckSolve()
+    {
+        int checks = 0;
+
+        Vector3[] dir = new Vector3[6];
+        dir[0] =  transform.forward;
+        dir[1] =  -transform.forward;
+        dir[2] =  transform.right;
+        dir[3] =  -transform.right;
+        dir[4] =  transform.up;
+        dir[5] =  -transform.up;
+
+        RaycastHit hit = new RaycastHit();
+
+        for (int i = 0; i < dir.Length; i++)
+        {
+            if (Physics.Raycast(transform.position, dir[i], out hit, 0.6f))
+            {
+                for (int j = 0; j < nPieces.Count; j++)
+                {
+                    if (hit.transform.GetComponent<Piece>() == nPieces[j])
+                    {
+                        checks++;
+                    }
+                }
+            }
+        }
+
+        if (checks == 3)
+        {
+            return true;
+        }
+        else
+            return false;
     }
 }

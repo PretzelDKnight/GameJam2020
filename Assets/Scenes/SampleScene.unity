@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504739993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 509771942}
   - component: {fileID: 509771941}
   - component: {fileID: 509771940}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,11 +480,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509771939}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.13386692}
-  m_Center: {x: 0, y: 0, z: 0.003591631}
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.06334183}
 --- !u!54 &509771943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5536,6 +5536,7 @@ GameObject:
   - component: {fileID: 444779266541948831}
   - component: {fileID: 147410081635211304}
   - component: {fileID: 147410081635211305}
+  - component: {fileID: 147410081635211306}
   m_Layer: 9
   m_Name: TV_Back_Top_Left
   m_TagString: Untagged
@@ -5555,8 +5556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 3
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &147410081635211305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5570,6 +5575,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.051767, y: 6.3945546, z: 4.3035603}
   m_Center: {x: 0, y: 0.00000011920928, z: 1.4210855e-14}
+--- !u!54 &147410081635211306
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147410081635211303}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &444779266541948831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5755,6 +5776,7 @@ GameObject:
   - component: {fileID: 3214881418961653710}
   - component: {fileID: 2842398194970625236}
   - component: {fileID: 2842398194970625237}
+  - component: {fileID: 2842398194970625238}
   m_Layer: 9
   m_Name: TV_Front_Bot_Left
   m_TagString: Untagged
@@ -5774,8 +5796,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 5
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &2842398194970625237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5789,6 +5815,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.051767, y: 7.267279, z: 3.0152576}
   m_Center: {x: 0, y: 0.000000834465, z: -0.00000011920929}
+--- !u!54 &2842398194970625238
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842398194970625235}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2894690453207795795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6090,6 +6132,7 @@ GameObject:
   - component: {fileID: 803953740111625713}
   - component: {fileID: 6247891553040442451}
   - component: {fileID: 6247891553040442452}
+  - component: {fileID: 6247891553040442453}
   m_Layer: 9
   m_Name: TV_Front_Top_Right
   m_TagString: Untagged
@@ -6109,8 +6152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 8
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &6247891553040442452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6124,6 +6171,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.232715, y: 6.3945527, z: 3.0151608}
   m_Center: {x: 0.00000047683716, y: 0.00000011920928, z: 0.0000004768371}
+--- !u!54 &6247891553040442453
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247891553040442450}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6571279184035209314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6137,6 +6200,7 @@ GameObject:
   - component: {fileID: 6224173933563936667}
   - component: {fileID: 6571279184035209315}
   - component: {fileID: 6571279184035209316}
+  - component: {fileID: 6571279184035209317}
   m_Layer: 9
   m_Name: TV_Front_Top_Left
   m_TagString: Untagged
@@ -6156,8 +6220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 7
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &6571279184035209316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6171,6 +6239,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.051767, y: 6.3945527, z: 3.0157568}
   m_Center: {x: 0, y: 0.00000035762784, z: -0.00000047683716}
+--- !u!54 &6571279184035209317
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571279184035209314}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &6607501727864048559
 Transform:
   m_ObjectHideFlags: 0
@@ -6212,6 +6296,7 @@ GameObject:
   - component: {fileID: 4459909487466456728}
   - component: {fileID: 6881441050702688246}
   - component: {fileID: 6881441050702688247}
+  - component: {fileID: 6881441050702688248}
   m_Layer: 9
   m_Name: TV_Back_Bot_Right
   m_TagString: Untagged
@@ -6231,8 +6316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 2
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &6881441050702688247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6246,6 +6335,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.231673, y: 7.2672825, z: 4.300669}
   m_Center: {x: 0.00000047683716, y: 0.0000009536743, z: -3.3881318e-21}
+--- !u!54 &6881441050702688248
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881441050702688245}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &6957661908478897258
 Transform:
   m_ObjectHideFlags: 0
@@ -6273,6 +6378,7 @@ GameObject:
   - component: {fileID: 5768300065457606966}
   - component: {fileID: 7035104991441660711}
   - component: {fileID: 7035104991441660712}
+  - component: {fileID: 7035104991441660713}
   m_Layer: 9
   m_Name: TV_Back_Bot_Left
   m_TagString: Untagged
@@ -6292,8 +6398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 1
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &7035104991441660712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6307,6 +6417,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.05175, y: 7.2672825, z: 4.300669}
   m_Center: {x: -0.00000023841855, y: 0.0000009536743, z: -3.3881318e-21}
+--- !u!54 &7035104991441660713
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035104991441660710}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!33 &8438906872825067762
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6328,6 +6454,7 @@ GameObject:
   - component: {fileID: 5629758534794082246}
   - component: {fileID: 8846406700352269945}
   - component: {fileID: 8846406700352269946}
+  - component: {fileID: 8846406700352269947}
   m_Layer: 9
   m_Name: TV_Front_Bot_Right
   m_TagString: Untagged
@@ -6347,8 +6474,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 6
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &8846406700352269946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6362,6 +6493,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.232715, y: 7.2704206, z: 3.0151598}
   m_Center: {x: 0.00000047683716, y: 0.00000059604645, z: -0.00000035762787}
+--- !u!54 &8846406700352269947
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846406700352269944}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9071401681471110227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6375,6 +6522,7 @@ GameObject:
   - component: {fileID: 5685612201653476073}
   - component: {fileID: 9071401681471110228}
   - component: {fileID: 9071401681471110229}
+  - component: {fileID: 9071401681471110230}
   m_Layer: 9
   m_Name: TV_Back_Top_Right
   m_TagString: Untagged
@@ -6394,8 +6542,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a79af6490b0d3438949ab5a06e7f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 4
   used: 0
   turning: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!65 &9071401681471110229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6409,3 +6561,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.232154, y: 6.3945546, z: 4.3006697}
   m_Center: {x: 0.00000047683716, y: 6.7762636e-21, z: -0.00000023841856}
+--- !u!54 &9071401681471110230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071401681471110227}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

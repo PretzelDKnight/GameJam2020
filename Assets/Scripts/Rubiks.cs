@@ -70,6 +70,11 @@ public class Rubiks : MonoBehaviour
         {
             turnable = false;
         }
+
+        if (CheckSolve())
+        {
+            Debug.Log("<color=red> Im Solved!!!! </color>");
+        }
     }
 
     void Rotate()
