@@ -216,7 +216,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
@@ -356,7 +356,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
@@ -524,6 +524,7 @@ MonoBehaviour:
   titleObject: {fileID: 1729916553}
   playButtonObject: {fileID: 1477922352}
   infoObject: {fileID: 1677394780}
+  titleAnimation: {fileID: 1729916558}
   solidColorAnim: {fileID: 1219278956}
 --- !u!1 &748165758
 GameObject:
@@ -706,7 +707,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
@@ -840,7 +841,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
@@ -935,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53333336, g: 0.83137256, b: 0.8901961, a: 1}
+  m_Color: {r: 0.53333336, g: 0.83137256, b: 0.8901961, a: 0.5647059}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1299,11 +1300,12 @@ Animation:
   m_GameObject: {fileID: 1729916553}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b9929943896272f45854f129ef9ee453, type: 2}
+  m_Animation: {fileID: 7400000, guid: 217d7f301bc630c45908068d22439ad4, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: b9929943896272f45854f129ef9ee453, type: 2}
+  - {fileID: 7400000, guid: 217d7f301bc630c45908068d22439ad4, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1839508067
