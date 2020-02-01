@@ -43,15 +43,13 @@ public class Model : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Cursor.lockState = CursorLockMode.Locked;
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Cursor.lockState = CursorLockMode.None;
         }
 
-        if (Input.GetKey(KeyCode.Mouse1) && !rubiks.Working())
+        if (Input.GetKey(KeyCode.Mouse1))
         {
             rb.AddTorque(direction, ForceMode.VelocityChange);
             time = 0;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Rubiks : MonoBehaviour
 {
     bool working;
@@ -40,6 +41,7 @@ public class Rubiks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckDir();
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 
@@ -50,13 +52,11 @@ public class Rubiks : MonoBehaviour
             turnable = true;
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Cursor.lockState = CursorLockMode.Locked;
                 CreatePiece();
             }
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                Cursor.lockState = CursorLockMode.None;
                 DestroyPiece();
             }
 
@@ -78,10 +78,7 @@ public class Rubiks : MonoBehaviour
         {
             foreach (var item in pieces)
             {
-                if (item.used)
-                {
-                    item.transform.RotateAround(transform.position, rotAxis, -mouseX + mouseY);
-                }
+                item.Rotate(transform.position, rotAxis, -mouseX + mouseY);
             }
 
             rotationAmt += -mouseX + mouseY;
@@ -123,7 +120,7 @@ public class Rubiks : MonoBehaviour
         Debug.Log("Creating Piece");
         foreach (var item in pieces)
         {
-            if (item.transform.position.z < 0.15f)
+            if (item.transform.position.z > 0.15f)
             {
                 item.used = true;
             }
@@ -161,8 +158,6 @@ public class Rubiks : MonoBehaviour
         float dot = 0;
         float highestDot = 0;
 
-        CheckDir();
-
         foreach (var axisDir in directionList)
         {
             dot = Vector3.Dot(axisDir, camDir);
@@ -187,13 +182,14 @@ public class Rubiks : MonoBehaviour
         directionList[5] = -transform.up;
     }
 
+    // Need to change
     void SetPiece()
     {
         float mod = rotationAmt % 90;
 
         if (mod >= 45 )
         {
-            Rotate( 90 - mod);
+            Rotate(90 - mod);
         }
         else if (mod < 45)
         {
@@ -201,8 +197,20 @@ public class Rubiks : MonoBehaviour
         }
     }
 
-    public bool Working()
+    public bool CheckSolve()
     {
-        return working;
+        int i = 0;
+        foreach (var item in pieces)
+        {
+            if (!item.CheckSolve())
+            {
+                i++;
+            }
+        }
+
+        if (i != 0)
+            return false;
+        else
+            return true;
     }
 }
