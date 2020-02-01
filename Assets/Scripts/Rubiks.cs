@@ -32,6 +32,7 @@ public class Rubiks : MonoBehaviour
     float rotationAmt;
 
     [SerializeField] GameObject endUp;
+    [SerializeField] AudioSource snapSource;
 
     // Start is called before the first frame update
     void Start()
@@ -195,6 +196,7 @@ public class Rubiks : MonoBehaviour
     // Need to change
     void SetPiece()
     {
+        snapSource.Play();
         float mod = rotationAmt % 90;
 
         if (mod >= 45 )
