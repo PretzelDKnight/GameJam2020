@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Model : MonoBehaviour
 {
+    public Rubiks rubiks;
     Vector3 frontRot;
 
     float mouseX;
@@ -42,7 +43,7 @@ public class Model : MonoBehaviour
 
         direction = new Vector3(mouseY, -mouseX, 0).normalized;
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Mouse1) && !rubiks.Working())
         {
             rb.AddTorque(direction, ForceMode.VelocityChange);
             time = 0;
