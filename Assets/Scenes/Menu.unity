@@ -213,6 +213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike_Ball (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_AABB.m_Center.y
@@ -347,6 +352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike_Ball (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
@@ -693,6 +703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike_Ball (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_AABB.m_Center.y
@@ -822,6 +837,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike_Ball
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d16256bb435e95c49986ccce8c1ceb87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: d16256bb435e95c49986ccce8c1ceb87,
         type: 3}
       propertyPath: m_AABB.m_Center.y
@@ -915,7 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53333336, g: 0.83137256, b: 0.8901961, a: 0.7921569}
+  m_Color: {r: 0.53333336, g: 0.83137256, b: 0.8901961, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1188,6 +1208,7 @@ GameObject:
   - component: {fileID: 1729916557}
   - component: {fileID: 1729916556}
   - component: {fileID: 1729916555}
+  - component: {fileID: 1729916558}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1211,8 +1232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 56}
-  m_SizeDelta: {x: 639.4, y: 456.8}
+  m_AnchoredPosition: {x: 23.6, y: -16.3}
+  m_SizeDelta: {x: 886.3, y: 431.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729916555
 MonoBehaviour:
@@ -1248,7 +1269,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 06d2dfb7399a6bf4d80188aae59bc9a8, type: 3}
+    m_Font: {fileID: 12800000, guid: d8605e07aa2b53b4cb09875bb775edef, type: 3}
     m_FontSize: 162
     m_FontStyle: 0
     m_BestFit: 0
@@ -1260,7 +1281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Twist\n            Fix"
+  m_Text: Fixuzzle
 --- !u!222 &1729916557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1269,6 +1290,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729916553}
   m_CullTransparentMesh: 0
+--- !u!111 &1729916558
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729916553}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b9929943896272f45854f129ef9ee453, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b9929943896272f45854f129ef9ee453, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1839508067
 GameObject:
   m_ObjectHideFlags: 0
